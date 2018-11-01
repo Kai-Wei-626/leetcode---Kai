@@ -52,4 +52,34 @@ class Solution(object):
         arr[j] = temp
     return(arr)
     
+    ## rotate to right, be careful with edge case when len(nums) <= 1
+class Solution(object):
+    def rotate(self, nums, k):
+        """
+        :type nums: List[int]
+        :type k: int
+        :rtype: void Do not return anything, modify nums in-place instead.
+        """
+        k = k % len(nums)
+        if k == 0:
+            return
+        l = len(nums)
+        for i in range(self.gcd(l, k)):
+            temp = nums[l-i-1]
+            j = l-i-1
+            while True:
+                p = j - k
+                if p < 0:
+                    p = p + l
+                if p == l-i-1:
+                    break
+                nums[j] = nums[p]
+                j = p
+            nums[j] = temp
+        
     
+    def gcd(self, a, b):
+        if b == 0:
+            return a
+        else:
+            return self.gcd(b, a%b)
