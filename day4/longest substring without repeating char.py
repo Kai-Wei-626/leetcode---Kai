@@ -38,3 +38,41 @@ class Solution(object):
             else:
                 box.append(c)
         return True
+    
+    
+#sliding window 
+'''
+https://www.youtube.com/watch?v=9VcYiqTqzUY
+解释的很好
+
+below are important tips
+1. initialize a counter with -1, switch to 1 when no duplicate
+2. when having duplicate, start left, find the duplicate in the sliding window.
+3. Don't forget to compare maxlen and right - left in the end, otherwise you won't pass test case 'aaaa'.
+'''
+class Solution(object):
+    def lengthOfLongestSubstring(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+        if s == '':
+            return 0
+        n = len(s)
+        left = 0
+        right = 0
+        maxlen = 0
+        counts = [-1]*128
+        while right < n:
+            if counts[ord(s[right])] == -1:
+                counts[ord(s[right])] = 1
+                right += 1
+            else:
+                while (left < right) and (s[right] != s[left]):
+                    maxlen = max(maxlen, right - left)
+                    counts[ord(s[left])] = -1
+                    left += 1
+                left += 1
+                right += 1
+        return max(maxlen, right - left)
+                    
