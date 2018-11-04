@@ -1,3 +1,7 @@
+'''
+from
+https://github.com/criszhou/LeetCode-Python/blob/master/017.%20Letter%20Combinations%20of%20a%20Phone%20Number.py
+'''
 class Solution(object):
     buttonToLetters = { str(i):s for i,s in enumerate([" ", "*", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"]) }
 
