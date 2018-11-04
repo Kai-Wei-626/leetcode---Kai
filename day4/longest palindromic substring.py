@@ -33,3 +33,6 @@ class Solution(object):
     
 s = Solution()
 s.longestPalindrome('abcbd')  
+
+##solution 2
+https://www.felix021.com/blog/read.php?2040
