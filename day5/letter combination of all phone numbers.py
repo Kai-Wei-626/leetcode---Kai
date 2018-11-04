@@ -18,3 +18,31 @@ class Solution(object):
             #print(self.buttonToLetters[c])
             ret = [a+b for a in ret for b in self.buttonToLetters[c] ]
         return ret
+
+    
+    
+#
+'''
+https://buptwc.github.io/2018/10/31/Leetcode-17-Letter-Combinations-of-a-Phone-Number/
+'''
+class Solution(object):
+    buttonToLetters = { str(i):s for i,s in enumerate([" ", "*", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"]) }
+
+    def letterCombinations(self, digits):
+        """
+        :type digits: str
+        :rtype: List[str]
+        """
+        ret = ['']
+        temp = []
+        for i in digits:
+            print(i)
+            for s in ret:
+                print('as ',s)
+                for s_plus in self.buttonToLetters[i]:
+                    temp.append(s+s_plus)
+            
+            ret = temp
+            temp = []
+        return ret
+                         
