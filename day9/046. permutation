@@ -1,0 +1,28 @@
+'''
+used list to record whatever element has been used/append to curr
+'''
+class Solution:
+    def permute(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[List[int]]
+        """
+        curr = []
+        result = []
+        used = [False] * len(nums)
+        self.helper(nums, used, curr, result)
+        return result
+        
+    def helper(self, nums, used, curr, result):
+        if len(curr) == len(nums):
+            result.append(list(curr))
+            return
+        for i in range(len(nums)):
+            if used[i]:
+                continue
+            else:    
+                curr.append(nums[i])
+                used[i] = True
+                self.helper(nums, used, curr, result)
+                curr.pop()
+                used[i] = False
