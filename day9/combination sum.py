@@ -7,6 +7,9 @@ cur =[1,2,3]
 ret.append(cur)
 cur.pop()
 ??为什么ret 中的list也pop了那
+
+解决方法，
+就是把ret.append(cur) 改为 ret.append(list(cur))
 '''
 
 
@@ -27,7 +30,7 @@ class Solution:
     def helper(self, remCandidate, remTarget, s, curr, retList):
        # print('round: ',remCandidate, remTarget, s, curr, retList)
         if remTarget == 0:
-            retList.append(curr)
+            retList.append(curr) # retList.append
          #   print('appending: ',remCandidate, remTarget, s, curr, retList)
             return
         
