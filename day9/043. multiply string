@@ -1,0 +1,47 @@
+'''
+1. be careful when one of the str is '0'
+2. the return str length won't exceed the sum of len of 2 strings
+3. be careful that the string needs to be reversed and then multiple them and store in the retlist
+4. ''.join function only apply on iterable string value, so ret has to be a list of string?
+5. first elemnet of ret can be zero, so make sure to check whether first value of ret is 0
+'''
+
+class Solution:
+    def multiply(self, num1, num2):
+        """
+        :type num1: str
+        :type num2: str
+        :rtype: str
+        """
+        if num1 == '0' or num2 == '0':
+            return '0'
+        ret = []
+        len1 = len(num1)
+        len2 = len(num2)
+        nums = [0]*(len1 + len2)
+        num1 = self.reverse(num1)
+        num2 = self.reverse(num2)
+        for i in range(len1):
+            for j in range(len2):
+                nums[i+j] += (ord(num1[i]) - ord('0')) * (ord(num2[j]) - ord('0'))
+        
+        for i in range(len(nums)-1):
+            quot = nums[i]//10
+            rem = nums[i]%10
+            nums[i+1] += quot
+            
+            ret.insert(0, str(rem))
+        
+        ret.insert(0, str(nums[-1]))
+        if ret[0] == '0':
+            del ret[0]
+        
+
+        return ''.join(ret)
+    
+    def reverse(self, s):
+        str1 = ''
+        for i in s:
+            str1 = i + str1
+        return str1
+            
