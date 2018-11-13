@@ -1,0 +1,38 @@
+'''
+slow algorithm...
+'''
+class Solution:
+    def rotateRight(self, head, k):
+        """
+        :type head: ListNode
+        :type k: int
+        :rtype: ListNode
+        """
+        if not head:
+            return None
+        dummy = ListNode(0)
+        dummy.next =head
+        first = dummy
+        
+        #get the length first
+        length  = 0
+        while first.next:
+            first = first.next
+            length += 1
+        k = k % length
+        
+        for i in range(k):
+            dummy = self.rotateOnce(dummy)
+        return dummy.next
+        
+    def rotateOnce(self, dummy):
+        #reset node first
+        first = dummy
+        while first.next:
+            if not first.next.next:
+                first.next.next = dummy.next
+                dummy.next = first.next
+                first.next = None
+                break
+            first = first.next
+        return dummy
