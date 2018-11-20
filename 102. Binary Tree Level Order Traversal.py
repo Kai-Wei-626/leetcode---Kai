@@ -1,3 +1,6 @@
+'''
+第一步： 找到高度。 第二步： bst每搜索到下一层，高度减一，打印条件为高度等于1.
+'''
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, x):
