@@ -1,9 +1,7 @@
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
+'''
+deque可以双向pop
+迭代终止条件为inorder list为空， 而不是preorder
+'''
 from collections import deque
 class Solution:
     def buildTree(self, preorder, inorder):
