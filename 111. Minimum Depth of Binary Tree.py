@@ -34,3 +34,24 @@ class Solution:
         
         
         
+        
+# clearer solution
+class Solution:
+    def minDepth(self, root):
+        """
+        :type root: TreeNode
+        :rtype: int
+        """
+        if root is None:
+            return 0
+        elif root.left is None and root.right is None:
+            return 1
+        elif root.left and root.right:
+            return 1 + min(self.minDepth(root.left), self.minDepth(root.right))
+        elif root.left and root.right is None:
+            return 1 + self.minDepth(root.left)
+        elif root.right and root.left is None:
+            return 1 + self.minDepth(root.right)
+        
+        
+        
