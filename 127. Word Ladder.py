@@ -3,6 +3,8 @@ BFS
 同一个level里面可能有多个词，所以在wordlist中这些词都会被remove，this is pretty effective since those word in same level are not expected 
 to change to each other. If they can be changed to each other then it's a waste of translation.
 
+另外，每次记得把next_level 清空
+
 https://www.youtube.com/watch?v=vWPCm69MSfs
 '''
 class Solution(object):
