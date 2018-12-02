@@ -26,3 +26,31 @@ class Solution(object):
                 self.helper(s[l:], wordDict, boolean)
                 if boolean[0] == True:
                     return
+
+                
+class Solution(object):
+    def wordBreak(self, s, wordDict):
+        """
+        :type s: str
+        :type wordDict: List[str]
+        :rtype: bool
+        """
+
+        maps = {}
+        return self.helper(s, maps, set(wordDict))
+
+    def helper(self, s, maps, wordDict):
+        print(s, maps)
+        if s in maps: return maps[s]
+        if s in wordDict:
+            maps[s] = True
+            return True
+
+        for i in range(1, len(s)):
+            r = s[i:]
+            if r in wordDict and self.helper(s[0:i], maps, wordDict):
+                maps[s] = True
+                return True
+
+        maps[s] = False
+        return False
