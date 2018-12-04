@@ -13,3 +13,7 @@ class Solution(object):
         
         return ' '.join(res)
             
+class Solution:
+        def reverseWords(self, s):
+            return " ".join(s.split()[::-1])
+
