@@ -1,0 +1,34 @@
+class Solution:
+    def mySqrt(self, x, k):
+        """
+        :type x: int
+        :rtype: int
+        """
+        
+        
+        left = 1
+        right = x
+        while left <= right:
+            mid = (left + right)//2
+            
+            if x == mid ** 2:
+                return mid
+            elif x >= mid**2:
+                left = mid + 1
+            else:
+                right = mid - 1
+                
+        ans = right
+        increment = 0.1
+        for i in range(k):
+            while ans*ans < x:
+                ans = ans + increment ** (i+1)
+            ans = ans - increment ** (i+1)
+        
+        return ans
+
+s = Solution()
+s.mySqrt(10, 4)
+   
+print(round(s.mySqrt(50, 3), 4)) 
+print(round(s.mySqrt(10, 4), 4)) 
