@@ -1,0 +1,34 @@
+def lengthOfLongestSubstring(self, s):
+	if not s: return 0
+	dic, res, start, = {}, 0, 0
+	for i, l in enumerate(s):
+		if l in dic and dic[l]>=start:
+			res = max(res, i-start)
+			start = dic[l]+1
+		dic[l] = i
+	return max(res, i-start+1)
+    
+    
+    
+class Solution(object):
+    def lengthOfLongestSubstring(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+        dic = {}
+        i = 0
+        count = 0
+        length = 0
+        while i < len(s):
+            if s[i] in dic:
+                duplicate_index = dic[s[i]]
+                i = duplicate_index + 1
+                dic = {}
+                count = 0
+            else:
+                dic[s[i]] = i
+                count += 1
+                length = max(length, count)
+        
+        return length
