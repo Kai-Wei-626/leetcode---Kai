@@ -38,16 +38,20 @@ Transition:
 - Role: Project Manager. Define project goal, manage development cycles, monitor working progress.
 
 
+
 - Team member name: Matt Davison
 - Role: Front-end Software Engineer. Mainly Focus on front end software development and UI design.
+
 
 
 - Team member name: Huguang Zheng
 - Role: Back-end Software Engineer. Mainly Focus on developing back end logic of the software.
 
 
+
 - Team member name: Kai Wei
 - Role: QA engineer. Create and automate and well-structured test plans and test cases.
+
 
 
 | team member   | role                        |
