@@ -1,7 +1,5 @@
 # Project Plan
 
-*This is the template for your project plan. The parts in italics are concise explanations of what should go in the corresponding sections and should not appear in the final document.*
-
 **Author**: team73
 
 ## 1 Introduction
@@ -18,7 +16,7 @@ Inception:
 
 Elaboration:
 - Activity name: Use cases analysis and architecture design.
-- Activity description: Create and analyze use cases, design initial architecture model.
+- Activity description: Create and analyze use cases, design initial architecture model that fits the application.
 - Entrance criteria: Dynamic user behaviours, system feasibiliy comparation analysis.
 - Exit criteria: Use case model and initial architecture design.
 
@@ -30,14 +28,38 @@ Construction:
 
 Transition:
 - Activity name: Deployment and maintenance.
-- Activity description: Deploy the software with selected platform and infrastructure and soft launch product in a limited range of users. Maintain and release new feature based on user feedback.
+- Activity description: Deploy the software with selected platform and infrastructure. Soft launch product in a limited range of users. Maintain and release new features based on user feedback.
 - Entrance criteria: Well developed software with stable performance. Cost Analysis and monetization plan.
 - Exit criteria: Deployment.
 
 ## 3 Team
 
-*Describe the team and their roles (include at least 4 roles, there may be more roles than there are team members)*
-
 - *Team members' names*
 - *Roles, with a short description of each role*
 - *Table showing which team member(s) has which role(s)*
+
+- Team member name: Yi Xiong
+- Role: Project Manager. Define project goal, manage development cycles, monitor working progress.
+
+- Team member name: Matt Davison
+- Role: Front-end Software Engineer. Mainly Focus on front end software development and UI design.
+
+- Team member name: Huguang Zheng
+- Role: Back-end Software Engineer. Mainly Focus on developing back end logic of the software.
+
+- Team member name: Kai Wei
+- Role: QA engineer. Create and automate and well-structured test plans and test cases.
+
+
+| team member   | role                        |
+|---------------|-----------------------------|
+| Yi Xiong      | Project Manager             |
+| Matt Davison  | Front-end Software Engineer |
+| Huguang Zheng | Back-end Software Engineer  |
+| Kai Wei       | QA engineer                 |
+
+
+
+
+
+
