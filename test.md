@@ -10,25 +10,29 @@ An Scrabble game with flexibilty of changing rules and viewing game statistics.
 
 ## 2 Process Description
 
-*Project development process description as a set of activities; for each development process activity, provide the following:*
-
-- *Activity name (verb or verb phrase)*
-- *Activity description (concise paragraph)*
-- *Entrance criteria (inputs needed for the activity)*
-- *Exit criteria (outputs produced by the activity and how you know it has been completed satisfactorily)*
 Inception:
-- Activity name: Requirement gathering and business modeling.
-- Activity description: Collect requirements based on use cases and create business model with UML diagram.
-- Entrance criteria: Use cases and requirement from professor Alex.
+- Activity name: Vision and business modeling.
+- Activity description: Translate ideas to general vision of the core project's requiremens, key features, and main constraints by UML diagram. Create business model based on potential business cases.
+- Entrance criteria: Ideas and requirements from professor Alex.
 - Exit criteria: UML chart with attributes and methods defined. 
 
 Elaboration:
-- Activity name: Use cases analysis and architecture design
-- Activity description: Create use cases 
+- Activity name: Use cases analysis and architecture design.
+- Activity description: Create and analyze use cases, design initial architecture model.
+- Entrance criteria: Dynamic user behaviours, system feasibiliy comparation analysis.
+- Exit criteria: Use case model and initial architecture design.
 
 Construction:
+- Activity name: Feature implementation and unit test.
+- Activity description: Build software, launch all features that passes all units test and all use cases.
+- Entrance criteria: Tasklist, project timeline.
+- Exit criteria: Software Prototype.
 
 Transition:
+- Activity name: Deployment and maintenance.
+- Activity description: Deploy the software with selected platform and infrastructure and soft launch product in a limited range of users. Maintain and release new feature based on user feedback.
+- Entrance criteria: Well developed software with stable performance. Cost Analysis and monetization plan.
+- Exit criteria: Deployment.
 
 ## 3 Team
 
