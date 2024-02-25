@@ -1,5 +1,12 @@
 '''
 first identify the sign, then calculate with num. Since the first number is not with a sign, it's default to '+'
+
+update - 2024
+1. process once more in the end of the loop. so don't forget that in the if condition
+2. everytime we encouter the sign, we run the helper function using the previous sign, then change the sign variable to s[i]
+3. no need to add isspace condition, it skip in the loop anyway.
+
+
 '''
 class Solution(object):
 	def calculate(self, s):
